@@ -1,12 +1,12 @@
 import readlineSync from 'readline-sync';
 
-function computerPlay() {
+const computerPlay = () => {
   const moves = ['камень', 'ножницы', 'бумага'];
   const randomIndex = Math.floor(Math.random() * moves.length);
   return moves[randomIndex];
 }
 
-function playRound(playerSelection, computerSelection) {
+const playRound = (playerSelection, computerSelection) => {
   playerSelection = playerSelection.toLowerCase();
   computerSelection = computerSelection.toLowerCase();
 
@@ -24,7 +24,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
-function game() {
+const game = () => {
   console.log("Добро пожаловать в игру 'Камень, Ножницы, Бумага'!");
 
   let playerScore = 0;
